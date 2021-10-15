@@ -1,4 +1,5 @@
 import React from "react";
+import { getFunName } from '../helpers';
 
 class StorePicker extends React.Component{
     render(){
@@ -6,7 +7,7 @@ class StorePicker extends React.Component{
             <> {/* Te permite fragmentar sin emparentar el HTM*/}
                 <form className='store-selector'>
                     <h2>Please enter a store</h2>
-                    <input type='text' required placeholder='Store Name' />
+                    <input type='text' required placeholder='Store Name'  defaultValue={getFunName()} />
                     <button type='submit'>Visit store</button>
                 </form>
             </>
